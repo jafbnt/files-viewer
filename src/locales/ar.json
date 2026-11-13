@@ -1,0 +1,13 @@
+{
+  "documentNavInfo": "مستند {{ currentFileNo }} من {{ allFilesCount }}",
+  "noRendererMessage": "{{{ fileType }}} : لا يمكننا عرض هذا النوع من الملفات",
+  "downloadButtonLabel": "تحميل الملف",
+  "brokenFile": "الملف تالف، يرجى التحقق منه على جهازك الخاص.",
+  "msgPluginRecipients": "المستلمين",
+  "msgPluginSender": "المرسل",
+  "pdfPluginLoading": "تحميل ...",
+  "pdfPluginPageNumber": " {{ allPagesCount }} \\ {{ currentPage }} صفحة ",
+  "imageRotateLeftLabel": "Rotate left",
+  "imageRotateRightLabel": "Rotate right",
+  "imageRotateResetLabel": "Reset rotation"
+}

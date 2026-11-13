@@ -1,0 +1,11 @@
+src
+demo
+*.test.tsx
+*.stories.tsx
+vitest.setup.ts
+vite.config.ts
+tsconfig.json
+tsconfig.build.json
+.gitignore
+.npmignore
+coverage

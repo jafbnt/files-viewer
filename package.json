@@ -1,0 +1,70 @@
+{
+  "name": "files-viewer",
+  "version": "1.18.0",
+  "description": "React file viewer for PDF, images, video, CSV, text, HTML and Microsoft Office documents.",
+  "author": "Gedocs",
+  "type": "module",
+  "license": "Apache-2.0",
+  "keywords": [
+    "react",
+    "file-viewer",
+    "doc-viewer",
+    "pdf",
+    "document-viewer",
+    "office",
+    "csv",
+    "image-viewer",
+    "video-viewer"
+  ],
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/files-viewer.js",
+  "module": "./dist/files-viewer.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/files-viewer.js"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "demo": "vite --config demo/vite.config.ts",
+    "build": "rm -rf dist && tsc --noEmit && vite build && node ./scripts/write-index-css.mjs",
+    "test": "vitest run",
+    "audit": "npm audit --omit=dev",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "core-js": "^3.51.0",
+    "mustache": "^4.2.0",
+    "papaparse": "^5.7.1",
+    "react-pdf": "^10.5.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-dsv": "^4.0.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/mustache": "^4.2.6",
+    "@types/node": "^24.13.3",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "happy-dom": "^21.0.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~5.9.3",
+    "vite": "^8.2.2",
+    "vite-plugin-dts": "^5.1.2",
+    "vitest": "^4.1.12"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
+  }
+}

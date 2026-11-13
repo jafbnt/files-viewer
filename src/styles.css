@@ -1,0 +1,71 @@
+/* Sem preflight — evita reset global no app consumidor */
+@import "tailwindcss/theme.css" prefix(fv);
+@import "tailwindcss/utilities.css" prefix(fv);
+
+@theme {
+  --color-primary: var(--fv-primary, #fff);
+  --color-secondary: var(--fv-secondary, #000);
+  --color-tertiary: var(--fv-tertiary, #ffffff99);
+  --color-ink: var(--fv-text-primary, #000);
+  --color-ink-inv: var(--fv-text-secondary, #fff);
+  --color-ink-muted: var(--fv-text-tertiary, #00000044);
+}
+
+@keyframes fv-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#react-doc-viewer .fv-spin {
+  animation: fv-spin 4s linear infinite;
+}
+
+#react-doc-viewer .fv-png-checkerboard {
+  background-color: white;
+  background-image:
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    0 10px,
+    10px -10px,
+    -10px 0;
+}
+
+#react-doc-viewer[data-scrollbar="on"] #pdf-renderer::-webkit-scrollbar {
+  width: 10px;
+}
+
+#react-doc-viewer[data-scrollbar="on"]
+  #pdf-renderer::-webkit-scrollbar-thumb {
+  background: var(--fv-tertiary, #ffffff99);
+}
+
+#react-doc-viewer[data-scrollbar="on"]
+  #pdf-renderer::-webkit-scrollbar-thumb:hover {
+  background: var(--fv-primary, #fff);
+}
+
+#react-doc-viewer .fv-csv-table th:empty,
+#react-doc-viewer .fv-csv-table td:empty {
+  display: none;
+}
+
+#react-doc-viewer .fv-csv-table {
+  border-collapse: collapse;
+}
+
+#react-doc-viewer img,
+#react-doc-viewer video,
+#react-doc-viewer canvas,
+#react-doc-viewer iframe {
+  display: block;
+  max-width: 100%;
+}
